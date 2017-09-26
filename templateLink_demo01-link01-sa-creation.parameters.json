@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "demosa02"
+            "value": "demosand01"
         },
         "location": {
             "value": "australiaeast"
