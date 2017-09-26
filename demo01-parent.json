@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+    },
+    "variables": {
+    },
+    "resources": [
+           {
+     "apiVersion": "2015-01-01",
+     "name": "link1",
+     "type": "Microsoft.Resources/deployments",
+     "properties": {
+       "mode": "incremental",
+       "templateLink": {
+          "uri":"https://raw.githubusercontent.com/ronsonblossomey/testc3/master/101-sa-simple.json",
+          "contentVersion":"1.0.0.0"
+       },
+       "parametersLink": {
+          "uri":"https://raw.githubusercontent.com/ronsonblossomey/testc3/master/101-sa-simple.parameters.json",
+          "contentVersion":"1.0.0.0"
+       }
+     }
+    },
+    {
+     "apiVersion": "2015-01-01",
+     "name": "link2",
+     "type": "Microsoft.Resources/deployments",
+     "properties": {
+       "mode": "incremental",
+       "templateLink": {
+          "uri":"https://raw.githubusercontent.com/ronsonblossomey/testc3/master/101-vm-simple-linux.json",
+          "contentVersion":"1.0.0.0"
+       },
+       "parametersLink": {
+          "uri":"https://raw.githubusercontent.com/ronsonblossomey/testc3/master/101-vm-simple-linux.parameters.json",
+          "contentVersion":"1.0.0.0"
+       }
+     }
+    }
+    ],
+  "outputs": {
+  }
+}
